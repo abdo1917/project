@@ -28,26 +28,13 @@ def process_data():
 
     users_ref = db.collection('Data')
     docs = users_ref.stream()
-    # key, value
-    for doc in docs:
-        print(f'{doc.id} => {doc.to_dict()}')
-
-    users_ref = db.collection('Data')
-    docs = users_ref.stream()
-
-    data_list = []
-    for doc in docs:
-        doc_data = doc.to_dict()
-        data_list.append(doc_data)
 
     # create a new list with only the values from each dictionary
     values_list = [list(data_dict.values()) for data_dict in data_list]
 
-    # cnvert
+    # convert
     my_array = np.array(values_list)
 
-    
-    
     #PREDICT
     from tensorflow.keras.models import load_model
 
