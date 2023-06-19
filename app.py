@@ -18,7 +18,7 @@ from firebase_admin import firestore
 def process_data():
     # Get data from Firebase
     # Use a service account.
-    cred = credentials.Certificate('projjjjjjjject-firebase-adminsdk-9fuvn-9b26d3e0d6.json')
+    cred = credentials.Certificate('projjjjjjjject.json')
 
     # check if the app has already been initialized
     if not firebase_admin._apps:
