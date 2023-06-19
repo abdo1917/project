@@ -51,7 +51,7 @@ def process_data():
     #PREDICT
     from tensorflow.keras.models import load_model
 
-    model = tf.keras.models.load_model('C:/Users/AHmed Maher/Downloads/model.h5')
+    model = tf.keras.models.load_model('model (1).h5')
 
     results = []
 
