@@ -115,7 +115,6 @@ def process_data():
         # set the document in Firestore
         doc_ref = db.collection(u'Out').document(record['output'])
         doc_ref.set(record)
-
-    #/////////////////////////////////////////////////////////////
+#/////////////////////////////////////////////////////////////
 if __name__ == '__main__':
     app.run(debug=True, port=9000)
