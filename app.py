@@ -23,11 +23,15 @@ def process_data():
     # check if the app has already been initialized
     if not firebase_admin._apps:
         firebase_admin.initialize_app(cred)
-
+    #read
     db = firestore.client()
-
     users_ref = db.collection('Data')
     docs = users_ref.stream()
+
+    data_list = []
+    for doc in docs:
+        doc_data = doc.to_dict()
+        data_list.append(doc_data)
 
     # create a new list with only the values from each dictionary
     values_list = [list(data_dict.values()) for data_dict in data_list]
