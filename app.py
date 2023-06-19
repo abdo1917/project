@@ -18,7 +18,7 @@ from firebase_admin import firestore
 def process_data():
     # Get data from Firebase
     # Use a service account.
-    cred = credentials.Certificate('C:/Users/AHmed Maher/Downloads/projjjjjjjject-firebase-adminsdk-9fuvn-9b26d3e0d6.json')
+    cred = credentials.Certificate('projjjjjjjject-firebase-adminsdk-9fuvn-9b26d3e0d6.json')
 
     # check if the app has already been initialized
     if not firebase_admin._apps:
@@ -52,7 +52,7 @@ def process_data():
     from tensorflow.keras.models import load_model
 
     model = tf.keras.models.load_model('model (1).h5')
-
+    ///////////////////////////////////
     results = []
 
     for i in range(len(my_array)):
