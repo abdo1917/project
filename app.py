@@ -26,9 +26,9 @@ def process_data():
     db = firestore.client()
     
     #read
+    
     users_ref = db.collection('Data')
     docs = users_ref.stream()
-
     data_list = []
     for doc in docs:
         doc_data = doc.to_dict()
